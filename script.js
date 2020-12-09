@@ -56,16 +56,16 @@ function numberPress(number) {
       memoryNewNumber = true;
       switch(memoryPendingOperation) {
         case '+':
-          memoryCurrentNumber = (memoryCurrentNumber + +localOperationMemory).toFixed(8);
+          memoryCurrentNumber = parseFloat((memoryCurrentNumber + +localOperationMemory).toFixed(10));
           break;
         case '-':
-          memoryCurrentNumber = (memoryCurrentNumber - +localOperationMemory).toFixed(8);
+          memoryCurrentNumber = parseFloat((memoryCurrentNumber - +localOperationMemory).toFixed(10));
           break;
         case '*':
-          memoryCurrentNumber = +(memoryCurrentNumber * +localOperationMemory).toFixed(8);
+          memoryCurrentNumber = +parseFloat((memoryCurrentNumber * +localOperationMemory).toFixed(10));
           break;
         case '/':
-          memoryCurrentNumber = +(memoryCurrentNumber / +localOperationMemory).toFixed(8);
+          memoryCurrentNumber = +parseFloat((memoryCurrentNumber / +localOperationMemory).toFixed(10));
           break;        
         default: 
         memoryCurrentNumber = +localOperationMemory;
